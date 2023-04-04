@@ -1,6 +1,9 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'pulsanti_grigio.dart';
+import 'pulsanti.dart';
+
 
 void main() {
   runApp(const MaterialApp(
@@ -29,197 +32,40 @@ class MainApp extends StatelessWidget {
         ],
       ),
       body: Column(
-          /*PRIMA RIGA*/
           children: [
+            /*prima riga */
             Row(
               children: [
-                Expanded(
-                  child: Container(
-                    child: CircleAvatar(
-                      backgroundColor: Colors.white,
-                      child: Center(
-                          child: Text(
-                        "7",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      )),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    child: CircleAvatar(
-                      backgroundColor: Colors.white,
-                      child: Center(
-                          child: Text(
-                        "8",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      )),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    child: CircleAvatar(
-                      backgroundColor: Colors.white,
-                      child: Center(
-                          child: Text(
-                        "9",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      )),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    child: CircleAvatar(
-                      backgroundColor: Colors.grey,
-                      child: Center(
-                          child: Text(
-                        "X",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      )),
-                    ),
-                  ),
-                ),
+                pulsanti(numero: "7"),
+                pulsanti(numero: "8"),
+                pulsanti(numero: "9"),
+                pulsanti_grigio(operatore: "X"),
+              ],
+            ),
+              /*seconda riga */
+              Row(
+              children: [
+                pulsanti(numero: "4"),
+                pulsanti(numero: "5"),
+                pulsanti(numero: "6"),
+                pulsanti_grigio(operatore: "/"),
               ],
             ),
 
-            /*SECONDA RIGA */
-            Row(
+                          /*terza riga */
+              Row(
               children: [
-                Expanded(
-                  child: Container(
-                    child: CircleAvatar(
-                      backgroundColor: Colors.white,
-                      child: Center(
-                          child: Text(
-                        "4",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      )),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    child: CircleAvatar(
-                      backgroundColor: Colors.white,
-                      child: Center(
-                          child: Text(
-                        "5",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      )),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    child: CircleAvatar(
-                      backgroundColor: Colors.white,
-                      child: Center(
-                          child: Text(
-                        "6",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      )),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    child: CircleAvatar(
-                      backgroundColor: Colors.grey,
-                      child: Center(
-                          child: Text(
-                        "/",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      )),
-                    ),
-                  ),
-                ),
+                pulsanti(numero: "1"),
+                pulsanti(numero: "2"),
+                pulsanti(numero: "3"),
+                pulsanti_grigio(operatore: "+"),
               ],
             ),
 
-            /*TERZA RIGA */
-            Row(
+                                      /*quarta riga */
+              Row(
               children: [
-                Expanded(
-                  child: Container(
-                    child: CircleAvatar(
-                      backgroundColor: Colors.white,
-                      child: Center(
-                          child: Text(
-                        "1",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      )),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    child: CircleAvatar(
-                      backgroundColor: Colors.white,
-                      child: Center(
-                          child: Text(
-                        "2",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      )),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    child: CircleAvatar(
-                      backgroundColor: Colors.white,
-                      child: Center(
-                          child: Text(
-                        "3",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      )),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    child: CircleAvatar(
-                      backgroundColor: Colors.grey,
-                      child: Center(
-                          child: Text(
-                        "+",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      )),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-
-            /*QUARTA RIGA */
-            Row(
-              children: [
-                Expanded(
+                                                Expanded(
                   child: Container(
                     child: CircleAvatar(
                       backgroundColor: Colors.orange,
@@ -233,50 +79,12 @@ class MainApp extends StatelessWidget {
                     ),
                   ),
                 ),
-                Expanded(
-                  child: Container(
-                    child: CircleAvatar(
-                      backgroundColor: Colors.white,
-                      child: Center(
-                          child: Text(
-                        "0",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      )),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    child: CircleAvatar(
-                      backgroundColor: Colors.grey,
-                      child: Center(
-                          child: Text(
-                        "C",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      )),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    child: CircleAvatar(
-                      backgroundColor: Colors.grey,
-                      child: Center(
-                          child: Text(
-                        "-",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      )),
-                    ),
-                  ),
-                ),
+                pulsanti(numero: "0"),
+                pulsanti_grigio(operatore: "C"),
+                pulsanti_grigio(operatore: "-"),
               ],
             ),
+
           ]),
     );
   }
